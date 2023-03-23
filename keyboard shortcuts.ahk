@@ -2,7 +2,7 @@
 
 ; Switch between open apps via thumbnails
 <^Tab::AltTab
-+Tab::Send !+{Tab}
+<+Tab::ShiftAltTab
 
 ; Delete (in front)
 <^BackSpace::Send {Delete}
@@ -36,13 +36,9 @@ F12::Send {Volume_Up 2}
 F11::Send {Volume_Down 2}
 F10::Send {Volume_Mute}
 
+#IfWinActive, ahk_exe Code.exe
 ~^s::
-{
-	IfWinActive, AHK - Visual Studio Code
-	{
-		Sleep, 200
-		Reload
-		MsgBox, Reloaded script
-	}
+	MsgBox, Reloaded script
+	Reload
 	return
-}
+#IfWinActive   
