@@ -1,11 +1,14 @@
-#SingleInstance Force
-#MaxHotkeysPerInterval 900
+#SingleInstance force
+A_MaxHotkeysPerInterval := 900
 
-WheelUp::
-Send {WheelDown}
-Return
+WheelUp::{
+	Send "{WheelDown}"
+	return
+}
 
-WheelDown::
-Send {WheelUp}
-Return
+WheelDown::{
+	Send "{WheelUp}"
+	return
+}
+	
 
